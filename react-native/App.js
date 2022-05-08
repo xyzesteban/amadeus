@@ -1,14 +1,22 @@
 import React, { useRef, useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { Appbar } from 'react-native-paper';
-import { Image, Modal, Button, StyleSheet, Text, View, ImageBackground } from 'react-native';
-import { Canvas, CanvasRef } from '@benjeau/react-native-draw';
+import { Image, Modal, Text, View, ImageBackground } from 'react-native';
+import { Canvas } from '@benjeau/react-native-draw';
 import uuid from 'react-native-uuid';
 import * as FileSystem from 'expo-file-system';
-import { S3, WellArchitected } from 'aws-sdk';
+import { S3 } from 'aws-sdk';
 import env from './config/env';
 import demo from './demo';
 import draggables from './draggables';
+import { composition as styles } from './styles/composition'
+import { LogBox } from 'react-native';
+
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+]);
+
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 const uploadImageOnS3 = async (fileUri, filename, contentType) => {
   const s3bucket = new S3({
@@ -18,7 +26,7 @@ const uploadImageOnS3 = async (fileUri, filename, contentType) => {
     region: env.AWS_REGION,
     signatureVersion: 'v4',
   });
-  console.log(s3bucket);
+  //console.log(s3bucket);
   let contentDeposition = 'inline;filename="' + `${filename}` + '"';
   const file = await FileSystem.readAsStringAsync(fileUri);
 s3bucket.createBucket(() => {
@@ -52,23 +60,23 @@ export default function App() {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [canvasVisible, setCanvasVisible] = useState(false);
-  const viewShot = useRef();
   const canvasRef = useRef();
-  const [displayedDraggables, setDraggables] = useState(Array(demo));
+  const [displayedDraggables, setDraggables] = useState(Array());
   const [count, setCount] = useState(-1);
 
   const insertNote = (name) => {
     //console.log("Before", displayedDraggables);
     //console.log("Inserting...")
+    console.log("COUNT", count);
     if (count == -1) {
       setDraggables(Array(...displayedDraggables, draggables["G-Clef"]));
       setCount(count+1)
     }
-    if (count == 0) {
+    else if (count == 0) {
       setDraggables(Array(...displayedDraggables, draggables["4-4-Time"]))
       setCount(count+1)
     }
-    if (count == 5 || count == 10) {
+    else if (count == 5 || count == 10) {
       setDraggables(Array(...displayedDraggables, draggables["Barline"]))
       setCount(count+1)
     }
@@ -79,7 +87,7 @@ export default function App() {
     console.log("Adding draggable!")
     
     //setDraggables(...displayedDraggables, sizes[name])
-    console.log("After", displayedDraggables);
+    //console.log("After", displayedDraggables);
   }
 
   const handleUndo = () => {
@@ -183,54 +191,4 @@ export default function App() {
       </View>
     </View>
   );
-}
-
-const styles = StyleSheet.create({
-  compTitle: {
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    color: 'black',
-    fontSize: 48,
-    fontFamily: 'Baskerville',
-  },
-  compSubTitle: {
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    color: 'black',
-    fontSize: 22,
-    fontFamily: 'Baskerville',
-  },
-  composerNote: {
-    textAlign: 'right',
-    textAlignVertical: 'bottom',
-    top: 20,
-    color: 'black',
-    fontSize: 16,
-    fontFamily: 'Baskerville',
-  },
-  compTempo: {
-    textAlign: 'left',
-    textAlignVertical: 'bottom',
-    color: 'black',
-    fontSize: 16,
-    fontFamily: 'Baskerville',
-    fontWeight: 'bold',
-  },
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: '#ffffff',
-  },
-  canvas: {
-    backgroundColor: 'transparent',
-  },
-  header: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    height: '100%',
-    borderBottomLeftRadius: 15,
-    borderBottomRightRadius: 15,
-  },
-});
+};

@@ -31,8 +31,8 @@ Current estimate for accuracy in production is 90%, but more research is needed.
 ## Pending Tasks
 
 Fix needed:
-- Built-in palm rejection from Apple Pencil is currently not supported.
-- Optimization of file upload (currently, the entire canvas is uplaoded, which adds to SVG to PNG conversion time and overall identification time. This needs to be cropped so that it's faster).
+- Add support for Apple Pencil's built-in palm rejection.
+- Optimization of file upload (currently, the entire canvas is uploaded, which adds to SVG to PNG conversion time and overall identification time. This needs to be cropped before uploading).
 
 Planned Features:
 - Moving Identify ("Brain") button closer to where the note is being drawn (for easier access).

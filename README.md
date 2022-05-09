@@ -36,6 +36,7 @@ Fix needed:
 
 Planned Features:
 - Moving Identify ("Brain") button closer to where the note is being drawn (for easier access).
+- Allowing user to browse, select, and add notes via a menu (the "traditional" way).
 - Recognizing triplets, ties, slurs, chord markings, more complex structures.
 - "Snap-to-grid" feature for notes and symbols.
 - Store & export user compositions as MusicXML or PDF.

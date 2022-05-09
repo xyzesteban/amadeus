@@ -6,7 +6,7 @@
 
 # Overview
 
-Amadeus is a music composition app for iPad / Android tablets which aims to provide a better experience for composers and songwriters. Inspired by my own experiences using composition software, my goal for this project is use a bottom-up approach to **Optical Music Recognition** allow using a stylus on a touchscreen for composition. Given a user’s input into the app, a machine learning model will attempt to recognize the notes and convert them to a digital format.
+Amadeus is a music composition app for iPad / Android tablets which aims to provide a better experience for composers and songwriters. Inspired by my own experiences using composition software, my goal for this project is to use a bottom-up approach to **Optical Music Recognition** and allow using a stylus on a touchscreen for music composition. Given a user’s input into the app, a machine learning model will attempt to recognize the notes and convert them to a digital format.
 
 ## Application Architecture
 

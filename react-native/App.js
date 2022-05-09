@@ -39,35 +39,27 @@ s3bucket.createBucket(() => {
   };
 s3bucket.upload(params, (err, data) => {
     if (err) {
-      console.log('Error in callback...');
-      console.log(err)
+      //console.log('Error in callback...', err);
     }
-  console.log('Uploaded image to S3!');
-  console.log("Response URL : "+ data.Location);
+  //console.log('Uploaded image to S3!');
+  //console.log("Response URL : "+ data.Location);
   });
 });
 };
-
-function wait(ms){
-  var start = new Date().getTime();
-  var end = start;
-  while(end < start + ms) {
-    end = new Date().getTime();
- }
-}
 
 export default function App() {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [canvasVisible, setCanvasVisible] = useState(false);
   const canvasRef = useRef();
-  const [displayedDraggables, setDraggables] = useState(Array());
+  const [displayedDraggables, setDraggables] = useState(Array(demo));
   const [count, setCount] = useState(-1);
 
   const insertNote = (name) => {
     //console.log("Before", displayedDraggables);
     //console.log("Inserting...")
-    console.log("COUNT", count);
+    //console.log("COUNT", count);
+    /** PLACEHOLDER FOR PLACING NOTES WHEN ML MODEL IS NOT RUNNING: */
     if (count == -1) {
       setDraggables(Array(...displayedDraggables, draggables["G-Clef"]));
       setCount(count+1)
@@ -84,7 +76,7 @@ export default function App() {
       setDraggables(Array(...displayedDraggables, draggables["Quarter-Note"]))
       setCount(count+1)
     }
-    console.log("Adding draggable!")
+    //console.log("Adding draggable!")
     
     //setDraggables(...displayedDraggables, sizes[name])
     //console.log("After", displayedDraggables);

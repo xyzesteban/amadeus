@@ -16,7 +16,7 @@ This is subject to change depending on features / fixes:
 
 ## Current Features
 
-- Drawing any number of notes in a canvas using a stylus (Tested with iPad/Apple Pencil setup).
+- Drawing any number of notes on a canvas using a stylus (Tested with iPad/Apple Pencil setup).
 - Recoginition of notes via AWS Lambda & Rekognition; automatically placing identified note or symbol in the canvas.
 - Moving previously placed notes or symbols using the stylus.
 - Clearing all drawings from the canvas in case of mistakes.

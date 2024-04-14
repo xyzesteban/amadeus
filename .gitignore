@@ -2,15 +2,8 @@
 |              START OF AMADEUS .gitignore               |
 |========================================================|
 
-tensorflow/.data
-tensorflow/src/data/cleanup/*
-tensorflow/src/data/label/*
-tensorflow/src/data/load/*
-tensorflow/src/data/preprocess/*
-tensorflow/src/data/processed/*
-tensorflow/src/logs/train/*
-tensorflow/src/logs/validation/*
-tensorflow/src/model/*.keras
+server/src/tensorflow/logs/*
+server/src/tensorflow/model/*.keras
 
 |========================================================|
 |               END OF AMADEUS .gitignore                |

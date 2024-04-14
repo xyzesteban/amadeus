@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Amadeus AWS Infrastucture Deployment
+
+Resources:
+  AmadeusApiGateway:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: MyAPIGateway
+      Description: Amadeus API Gateway
+
+  AmadeusApiGatewayDeployment:
+    Type: AWS::ApiGateway::Deployment
+    Properties:
+      RestApiId: !Ref AmadeusApiGateway
+      StageName: prod

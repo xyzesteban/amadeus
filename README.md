@@ -23,8 +23,15 @@ This is subject to change depending on features / fixes:
 
 ## AWS Rekognition
 
-The model was trained using the [HOMUS dataset](https://grfia.dlsi.ua.es/homus/), with the dataset split at 80% for training, and 20% for testing.
-Current estimate for accuracy in production is 90%, but more research is needed.
+The original model was trained using the [HOMUS dataset](https://grfia.dlsi.ua.es/homus/), with the dataset split at 80% for training, and 20% for testing.
+Current estimate for accuracy in production is 90%, but more testing is needed.
+
+![Rekognition Current Metrics](https://user-images.githubusercontent.com/42325882/167320947-13fac3d5-7c3b-41f5-ab1b-730b0fed68b0.png)
+
+## Tensorflow
+
+A new model was trained using the [HOMUS dataset](https://grfia.dlsi.ua.es/homus/), with the dataset split at 70% for training, 20% for testing, and 10% for validation.
+Current estimate for accuracy in production is 83%, but more testing is needed.
 
 ![Rekognition Current Metrics](https://user-images.githubusercontent.com/42325882/167320947-13fac3d5-7c3b-41f5-ab1b-730b0fed68b0.png)
 

@@ -1,11 +1,11 @@
 from omrdatasettools import Downloader, OmrDataset
 
 downloader = Downloader()
-downloader.download_and_extract_dataset(OmrDataset.Homus_V2, "data")
+downloader.download_and_extract_dataset(OmrDataset.Homus_V2, "raw")
 
 from omrdatasettools import HomusImageGenerator
 
-HomusImageGenerator.create_images(raw_data_directory="raw",
+HomusImageGenerator.create_images(raw_data_directory="HOMUS",
                                   destination_directory="HOMUS_labeled",
                                   stroke_thicknesses=[3],
                                   canvas_width=96,

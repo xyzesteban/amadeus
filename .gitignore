@@ -3,6 +3,7 @@
 |========================================================|
 
 server/src/tensorflow/data/raw/*
+server/src/tensorflow/data/labeled/*
 server/src/tensorflow/data/*.zip
 server/src/tensorflow/logs/*
 server/src/tensorflow/model/*.keras

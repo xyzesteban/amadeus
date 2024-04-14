@@ -12,7 +12,7 @@ Amadeus is a music composition app for iPad / Android tablets which aims to prov
 
 This is subject to change depending on features / fixes:
 
-![Application Architecture](https://user-images.githubusercontent.com/42325882/167320835-f20441b6-132c-4f55-96e6-2dac7dffd954.png)
+![Amadeus Application Architecture](https://github.com/xyzes/amadeus/assets/42325882/198493ad-d87b-4d5b-92d0-8ba594e4be81)
 
 ## Current Features
 
@@ -33,7 +33,8 @@ Current estimate for accuracy in production is 90%, but more testing is needed.
 A new model was trained using the [HOMUS dataset](https://grfia.dlsi.ua.es/homus/), with the dataset split at 70% for training, 20% for testing, and 10% for validation.
 Current estimate for accuracy in production is 83%, but more testing is needed.
 
-![Rekognition Current Metrics](https://user-images.githubusercontent.com/42325882/167320947-13fac3d5-7c3b-41f5-ab1b-730b0fed68b0.png)
+![Tensorflow Current Metrics](https://github.com/xyzes/amadeus/assets/42325882/dd2ef88c-db2d-45f1-a238-129929d77079)
+
 
 ## Pending Tasks
 

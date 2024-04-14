@@ -2,6 +2,7 @@
 |              START OF AMADEUS .gitignore               |
 |========================================================|
 
+server/src/tensorflow/data/*.zip
 server/src/tensorflow/logs/*
 server/src/tensorflow/model/*.keras
 

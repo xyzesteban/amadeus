@@ -55,18 +55,25 @@ Others:
 
 # Media
 
-<p align="center"><strong>G-Clef identification</strong></p>
-
-![RPReplay_Final1652049846_1](https://user-images.githubusercontent.com/42325882/167320676-c45c486d-36b5-4e38-8211-387c56becabf.gif)
-
-<p align="center"><strong>Quarter Note identification</strong></p>
-
-![RPReplay_Final1652049846](https://user-images.githubusercontent.com/42325882/167320692-659263cc-c115-4765-af9c-ed2a4df033ea.gif)
-
-<p align="center"><strong>Barline identification</strong></p>
-
-![RPReplay_Final1652049846_2](https://user-images.githubusercontent.com/42325882/167320697-54663365-a07b-4f27-bd93-3105c6b8ba62.gif)
-
-<p align="center"><strong>Final Result</strong></p>
-
-![IMG_0076](https://user-images.githubusercontent.com/42325882/167331056-1ac6a516-f8ef-43b3-b015-117caf5fb620.PNG)
+<table>
+  <tr>
+    <td width="500" >
+      <h4>G-Clef identification</h4>
+      <div style="height: 300px; overflow: hidden;"><img src="https://user-images.githubusercontent.com/42325882/167320676-c45c486d-36b5-4e38-8211-387c56becabf.gif"/></div>
+    </td>
+    <td width="500" >
+      <h4>Quarter Note identification</h4>
+      <div style="height: 300px; overflow: hidden;"><img src="https://user-images.githubusercontent.com/42325882/167320692-659263cc-c115-4765-af9c-ed2a4df033ea.gif"/></div>
+    </td>
+  </tr>
+  <tr>
+    <td width="500" >
+      <h4>Barline identification</h4>
+      <div style="height: 300px; overflow: hidden;"><img src="https://user-images.githubusercontent.com/42325882/167320697-54663365-a07b-4f27-bd93-3105c6b8ba62.gif"></div>
+    </td>
+    <td width="500" >
+      <h4>Final Result</h4>
+      <div style="height: 300px; overflow: hidden;"><img src="https://user-images.githubusercontent.com/42325882/167331056-1ac6a516-f8ef-43b3-b015-117caf5fb620.PNG"></div>
+    </td>
+  </tr>
+</table>
